@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0c35a2b9717da1f6b16303f01f4d43e",
+    "revision": "62b3377d01777cb6c222f4476b138f7e",
     "url": "/pointsytem/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pointsytem/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "86ff7da27acefbbf3989",
-    "url": "/pointsytem/static/css/main.fdb97f00.chunk.css"
+    "revision": "92d8968d240761db07ef",
+    "url": "/pointsytem/static/css/main.f5502b35.chunk.css"
   },
   {
     "revision": "4e87342fcf55b395a5ba",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pointsytem/static/js/2.5ac5b655.chunk.js.LICENSE"
   },
   {
-    "revision": "86ff7da27acefbbf3989",
-    "url": "/pointsytem/static/js/main.251cd96f.chunk.js"
+    "revision": "92d8968d240761db07ef",
+    "url": "/pointsytem/static/js/main.50cac064.chunk.js"
   },
   {
     "revision": "99eaeeffaabb548c4f7a",
