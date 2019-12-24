@@ -23,16 +23,22 @@ export default class Detail extends Component {
                         }
 
     render() {
-               
+               console.log(this.state.emp_detail)
         return (
             <div>
-                <div className="detailpage">
-                {/* {this.state.emp_detail.length > 0 ? <Dashboard style={{display :'none'}} emp_details={this.state.emp_detail}  /> : null}                 */}
-                </div>
+                <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item active" aria-current="page">Detail</li>
+                    </ol>
+                </nav>
                 <table className="user">
                     <thead>
                         <tr>
                             <th>Project Name</th>
+                            <th>Project type</th>
+                            <th>Project status</th>
+                            <th>Feedback</th>
+                            <th>Point type</th>
                             <th>Allotted Points</th>
                             <th>Kickoff Points</th>
                             <th>Retention Points</th>
@@ -49,6 +55,10 @@ export default class Detail extends Component {
                         return (
                             <tr key={index}>
                                 <td>{person['Project Name']}</td>
+                                <td>{person['Project Type']}</td>
+                                <td>{person['Project Status']}</td>
+                                <td>{person['Client Feedback']}</td>
+                                <td>{person['Point Type']}</td>
                                 <td>{person['Dev1 Points']}</td>
                                 <td>{person['Dev1 Kickoff']}</td>
                                 <td>{person['Dev1 Retention']}</td>
@@ -60,18 +70,21 @@ export default class Detail extends Component {
                         )
                     }) 
                 }
-
-                    </tbody>
-                </table>
-                
                 {
-                    !this.state.emp_detail.length &&  
+                    !this.state.emp_detail.length &&
+                    <tr>
+                        <td colSpan={12}>
                     <div className="d-flex justify-content-center">
                     <div className="spinner-border text-success" role="status">
                         <span className="sr-only">Loading...</span>
                     </div>
                     </div>
+                        </td>
+                    </tr> 
                 }
+
+                    </tbody>
+                </table>
 
             </div>
         )
