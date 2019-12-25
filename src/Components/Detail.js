@@ -13,7 +13,7 @@ export default class Detail extends Component {
             Tabletop.init({ key: 'https://docs.google.com/spreadsheets/d/1LiWlQHawZaLkaN7S_YMTlvg-CEQfBQ-EaO4nVDHda3Y/edit#gid=0',
                               callback: data=>{
                                   if(localStorage.getItem('authData')) {
-                                      const  particularEmployee = lodash.filter(data.Projects.elements, emp => emp['Dev1 Name'].toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase());
+                                      const  particularEmployee = lodash.filter(data.Projects.elements, emp => emp['Dev1 Name'].toLowerCase() || emp['Dev2 Name'].toLowerCase() || emp['Dev3 Name'].toLowerCase() || emp['Dev4 Name'].toLowerCase() || emp['Dev5 Name'].toLowerCase() || emp['Dev6 Name'].toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase());
                                       this.setState({
                                           emp_detail: particularEmployee
                                       })                                     
@@ -23,7 +23,7 @@ export default class Detail extends Component {
                         }
 
     render() {
-               console.log(this.state.emp_detail)
+        console.log(this.state.emp_detail)
         return (
             <div>
                 <nav aria-label="breadcrumb">
@@ -31,7 +31,7 @@ export default class Detail extends Component {
                         <li className="breadcrumb-item active" aria-current="page">Detail</li>
                     </ol>
                 </nav>
-                <table className="user">
+                <table className="user" width="100%">
                     <thead>
                         <tr>
                             <th>Project Name</th>

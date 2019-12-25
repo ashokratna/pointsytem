@@ -1,11 +1,14 @@
 import React ,{Component} from 'react';
 import '../Style/Common.css';
-import {NavLink, withRouter} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom'
+
 
 class Navbar extends Component{
     constructor(props){
         super(props);
     }
+
+    
     render(){
     return (
         <div>
@@ -13,7 +16,7 @@ class Navbar extends Component{
                 <div className="container-fluid">
                 <div className="navbar-header">
                 
-                    <a className="navbar-brand" href="#"><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                    <a className="navbar-brand" href=""><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                     <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
                 </svg>Hello, {JSON.parse(localStorage.getItem('authData')).name}</a>
                 </div>
@@ -30,7 +33,7 @@ class Navbar extends Component{
                 </div>
                 </nav>
 
-                <nav className="navbar-primary">
+                <nav className="navbar-primary" ref="navbar">
                     <a href="#" className="btn-expand-collapse"><span className="glyphicon glyphicon-menu-left"></span></a>
                     <ul className="navbar-primary-menu">
                     <li>

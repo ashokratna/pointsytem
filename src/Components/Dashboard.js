@@ -3,17 +3,18 @@ import Tabletop from "tabletop";
 import * as lodash from 'lodash';
 
 export default class Dashboard extends Component {
-    state={ emp_data : [], Cuttoff :0}
+    state={ emp_data : [], Cutoff :''}
     
     componentDidMount(){
         Tabletop.init({ key: 'https://docs.google.com/spreadsheets/d/1LiWlQHawZaLkaN7S_YMTlvg-CEQfBQ-EaO4nVDHda3Y/edit#gid=0',
                           callback: data=>{
                               if(localStorage.getItem('authData')) {
-                                  const  particularEmployee = lodash.filter(data.Projects.elements, emp => emp['Dev1 Name'].toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase());
-                                //   const particularCuttoff = lodash.find(data.Cutoff.elements, cutoff => )
+                                  const  particularEmployee = lodash.filter(data.Projects.elements, emp => emp['Dev1 Name'].toLowerCase() || emp['Dev2 Name'].toLowerCase() || emp['Dev3 Name'].toLowerCase() || emp['Dev4 Name'].toLowerCase() || emp['Dev5 Name'].toLowerCase() || emp['Dev6 Name'].toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase());
+                                  const particularCutoff = lodash.find(data.Cutoff.elements, (emp) => emp.Developer.toString().toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase())
                                   this.setState({
-                                    emp_data: particularEmployee
-                                  })                                     
+                                    emp_data: particularEmployee,
+                                    Cutoff : particularCutoff
+                                  })              
                               }
                           },
                           simpleSheet: false } )
@@ -54,10 +55,7 @@ export default class Dashboard extends Component {
             });
         }
 
-        // var Edp = sumEligible*sumCuttoff*(5/100)
-
-        console.log(this.state.emp_data)
-
+        console.log(this.state.Cutoff)
         return (
             <div>
                 <nav aria-label="breadcrumb">
@@ -79,7 +77,7 @@ export default class Dashboard extends Component {
                     </tr>
                     <tr>
                         <th>Allotted Points</th>
-                        <td>{sumAllted.toFixed(2)}</td>
+                        <td>{Math.round(sumAllted)}</td>
                     </tr>
                     <tr>
                         <th>Kickoff Points</th>
@@ -91,23 +89,23 @@ export default class Dashboard extends Component {
                     </tr>
                     <tr>
                         <th>Timely Delivery Points</th>
-                        <td>{sumTdp}</td>
+                        <td>{Math.round(sumTdp)}</td>
                     </tr>
                     <tr>
                         <th>Post Delivery Cycle Points</th>
-                        <td>{sumPdc}</td>
+                        <td>{Math.round(sumPdc)}</td>
                     </tr>
                     <tr>
                         <th>Total Eligible Points</th>
-                        <td>{sumEligible.toFixed(2)}</td>
+                        <td>{Math.round(sumEligible)}</td>
                     </tr>
                     <tr>
                         <th>Final Points</th>
-                        <td>{sumFinal.toFixed(2)}</td>
+                        <td>{Math.round(sumFinal)}</td>
                     </tr>
                     <tr>
                         <th>Cuttoff</th>
-                        <td>{sumCuttoff}</td>
+                        <td>{this.state.Cutoff.Cutoff}</td>
                     </tr>
                     <tr>
                         <th>Number of Escalations</th>
@@ -115,11 +113,11 @@ export default class Dashboard extends Component {
                     </tr>
                     <tr>
                         <th>Escalation Deduction Points</th>
-                        <td>{sumEdp.toFixed(2)}</td>
+                        <td>{Math.round(sumEdp)}</td>
                     </tr>
                     <tr>
                         <th>Efficiency Booster</th>
-                        <td>{sumBooster.toFixed(2)}</td>
+                        <td>{Math.round(sumBooster)}</td>
                     </tr>
                     </tbody>
                 </table>) : (<div className="d-flex justify-content-center">

@@ -71,8 +71,14 @@
 
   /* Navbar styling */
 
+  .navbar{
+    position: fixed !important;
+    width: 100%;
+  }
+
   .navbar-global {
     background-color: indigo;
+    position: fixed;
   }
   
   .navbar-global .navbar-brand {
@@ -88,8 +94,9 @@
     background-color: #333;
     bottom: 0px;
     left: 0px;
-    position: absolute;
-    top: 51px;
+    position: fixed;
+    top: 60px;
+    height: 100%;
     width: 200px;
     z-index: 8;
     overflow: hidden;
@@ -163,7 +170,7 @@
   
   .main-content {
     margin-left: 200px;
-    padding: 20px;
+    padding: 65px;
   }
   
   .collapsed + .main-content {

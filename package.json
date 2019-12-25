@@ -2,7 +2,6 @@
   "name": "api_call",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ashokratna.github.io/pointsytem",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -21,7 +20,7 @@
     "tabletop": "^1.6.2"
   },
   "scripts": {
-    "start": "set host=172.16.3.240&&set port=8080 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy":"npm run build",
