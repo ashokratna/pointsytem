@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pointsytem/static/css/main.a54bef4c.chunk.css",
+    "main.js": "/pointsytem/static/js/main.fda4f9c1.chunk.js",
+    "main.js.map": "/pointsytem/static/js/main.fda4f9c1.chunk.js.map",
+    "runtime-main.js": "/pointsytem/static/js/runtime-main.eb1edb45.js",
+    "runtime-main.js.map": "/pointsytem/static/js/runtime-main.eb1edb45.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/pointsytem/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.d890c6d9.chunk.js": "/pointsytem/static/js/2.d890c6d9.chunk.js",
+    "static/js/2.d890c6d9.chunk.js.map": "/pointsytem/static/js/2.d890c6d9.chunk.js.map",
+    "index.html": "/pointsytem/index.html",
+    "precache-manifest.08fa2a169dffb60e6bcb047580e2c08e.js": "/pointsytem/precache-manifest.08fa2a169dffb60e6bcb047580e2c08e.js",
+    "service-worker.js": "/pointsytem/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/pointsytem/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.a54bef4c.chunk.css.map": "/pointsytem/static/css/main.a54bef4c.chunk.css.map",
+    "static/js/2.d890c6d9.chunk.js.LICENSE": "/pointsytem/static/js/2.d890c6d9.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb1edb45.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.d890c6d9.chunk.js",
+    "static/css/main.a54bef4c.chunk.css",
+    "static/js/main.fda4f9c1.chunk.js"
+  ]
+}
