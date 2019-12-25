@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Tabletop from "tabletop";
 import * as lodash from 'lodash';
 import '../Style/Common.css'
-import Dashboard from './Dashboard'
 
 export default class Detail extends Component {
     state = {
@@ -16,7 +15,7 @@ export default class Detail extends Component {
                                       const  particularEmployee = lodash.filter(data.Projects.elements, emp => emp['Dev1 Name'].toLowerCase() || emp['Dev2 Name'].toLowerCase() || emp['Dev3 Name'].toLowerCase() || emp['Dev4 Name'].toLowerCase() || emp['Dev5 Name'].toLowerCase() || emp['Dev6 Name'].toLowerCase() === JSON.parse(localStorage.getItem('authData')).name.toLowerCase());
                                       this.setState({
                                           emp_detail: particularEmployee
-                                      })                                     
+                                      })
                                   }
                               },
                               simpleSheet: false } )

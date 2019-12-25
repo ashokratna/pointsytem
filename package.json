@@ -2,6 +2,7 @@
   "name": "api_call",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ashokratna.github.io/pointsystem",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -17,14 +18,15 @@
     "react-loader-spinner": "^3.1.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "serve": "^11.2.0",
     "tabletop": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

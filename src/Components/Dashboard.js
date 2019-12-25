@@ -32,6 +32,10 @@ export default class Dashboard extends Component {
         var sumEscaltions = 0;
         var sumEdp = 0;
         var sumBooster =0;
+        var payablePoint = 0;
+
+        var cutoffPoint = this.state.Cutoff.Cutoff;
+
         if(this.state.emp_data.length > 0){
             this.state.emp_data.map((person, index) => {
                 sumAllted = sumAllted + parseFloat(person['Dev1 Points']);
@@ -65,9 +69,9 @@ export default class Dashboard extends Component {
                 </nav>
                 {
                   !!this.state.emp_data.length ? (
-<table className="user dash">
+                <table className="user dash">
                     <tbody>
-                    <tr>
+                    <tr className="highlight">
                         <th>Name</th>
                         <td>{JSON.parse(localStorage.getItem('authData')).name}</td>
                     </tr>
@@ -105,7 +109,7 @@ export default class Dashboard extends Component {
                     </tr>
                     <tr>
                         <th>Cuttoff</th>
-                        <td>{this.state.Cutoff.Cutoff}</td>
+                        <td>{cutoffPoint}</td>
                     </tr>
                     <tr>
                         <th>Number of Escalations</th>
@@ -118,6 +122,10 @@ export default class Dashboard extends Component {
                     <tr>
                         <th>Efficiency Booster</th>
                         <td>{Math.round(sumBooster)}</td>
+                    </tr>
+                    <tr className="highlight">
+                        <th>Payable Points</th>
+                        <td>{Math.round(sumFinal - cutoffPoint - sumEdp + sumBooster)}</td>
                     </tr>
                     </tbody>
                 </table>) : (<div className="d-flex justify-content-center">

@@ -18,11 +18,40 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #333;
+    background-color: #737373;
     color: white;
   }
   .user.dash th{
     width: 50%;
+    background-color: #c4c4c4;
+  }
+
+  table.user.dash th{
+    border: 1px solid black;
+  }
+
+  table.user.dash td{
+    border: 1px solid black;
+  }
+
+  table.user.dash{
+    width : 45% ;
+    margin: 0 auto;
+  }
+  table.user.dash tr{
+    text-align: center;
+    background-color: white;
+  }
+
+  table.user.dash tr.highlight{
+    background-color: #fcf451;
+  }
+
+  table.user.dash tr.highlight td{
+    font-weight: bold;
+  }
+  table.user.dash tr.highlight th{
+    background-color: #737373;
   }
 
   .loginbtn {

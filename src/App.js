@@ -12,6 +12,7 @@ import Layout from './Components/Layout';
 import Dashboard from './Components/Dashboard';
 import Detail from './Components/Detail';
 import Admin from './Components/Admin';
+import Test from './Components/test';
 
 
 class App extends React.Component {
